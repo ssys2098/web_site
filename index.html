@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신체 정보</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>3D 신체 정보 입력</h1>
+    <form action="result.html">
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" required
+        placeholder="이름을 입력하세요" autofocus>
+       
+        <label for="age">나이:</label>
+        <input type="number" id="age" name="age" required
+        placeholder="나이를 입력하세요">
+        
+        <p>성별:</p>
+        <label><input type="radio" name="gender" value="male" checked> 남성</label>
+        <label><input type="radio" name="gender" value="female"> 여성</label>  
+    
+        <fieldset>
+            <legend>키 (cm) 입력:</legend>
+            <label for="height">키</label>
+            <input type="number" id="height" name="height" min="0" required
+            placeholder="키를 입력해주세요">
+        </fieldset>
+    </body>
+        <label for="weight">몸무게 (kg):</label>
+        <input type="number" id="weight" name="weight" required
+        placeholder="몸무게를 입력해주세요"><br><br>
+        <fieldset>
+            <legend>혈액형 선택:</legend>
+            <select id="bloodType" name="bloodType">
+                <option value="A">A형</option> 
+                <option value="B">B형</option> 
+                <option value="AB">AB형</option>
+                <option value="O">O형</option>
+            </select>
+            <select id="bloodsign" name="bloodsign">
+                <option value="+">Rh+</option>
+                <option value="-">Rh-</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>병 명:</legend>
+            <textarea nmae="disease" id="disease" cols="45" rows="3"placeholder="없으면 넘어가주세요"></textarea>
+            <input id="filelp" type="file" accept="image/png, image/jpeg" multiple>
+        </fieldset>
+        <fieldset>
+            <legend>특이사항:</legend>
+            <textarea nmae="note" id="note" cols="45" rows="3" placeholder="없으면 제출해주세요"></textarea>
+            <input id="filelp" type="file" accept="image/png, image/jpeg" multiple>
+        </fieldset>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+    </form>
+</body>
+</html>
